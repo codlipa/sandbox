@@ -94,7 +94,7 @@ a, a:visited, a:hover {
 .header__menu a::after {
   content: '';
   width: 100%;
-  height: 0.415rem;
+  height: .415rem;
   position: absolute;
   left: 0;
   top: -45px;
