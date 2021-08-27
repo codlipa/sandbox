@@ -1,0 +1,9 @@
+.header {
+    background-color: $navyBlue;
+    padding: 10px;
+
+    &__logo {
+        display: block;
+        font-size: $font-xl;
+    }
+}
