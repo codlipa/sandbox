@@ -9,13 +9,6 @@ body {
   color: #fff;
 }
 
-.effect {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 25px;
-}
-
 iframe, a {
   background-color: #fff;
 }
@@ -30,4 +23,16 @@ a {
   padding: 15px 30px;
   text-decoration: none;
   border-radius: 0 0 25px 25px;
+}
+
+.effect {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.animate__animated.animate__zoomIn.item-1 {
+  --animate-duration: 0.7s;
+  --animate-delay: 10s;
 }
