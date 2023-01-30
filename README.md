@@ -1,1 +1,1 @@
-A simple sandbox for testing and validation. There is nothing interesting here, don't go here
+A simple sandbox for validation and testing. You shouldn't be here
