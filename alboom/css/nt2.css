@@ -1,0 +1,2480 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+:focus {
+  outline: 0;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  max-width: 100%;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+figure {
+  margin: 0;
+}
+
+form {
+  margin: 0;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+@font-face {
+  font-family: 'Space';
+  src: url("../fonts/space.eot");
+  src: local("☺"), url("../fonts/space.woff") format("woff"), url("../fonts/space.ttf") format("truetype"), url("../fonts/space.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  background-image: url(../images/background.webp);
+  padding-top: 120px;
+}
+
+.header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 50%;
+  margin-left: -155px;
+}
+
+.header a {
+  display: inline-block;
+  outline: none;
+  padding: 0px 30px;
+  color: #fff;
+  font-family: 'Space';
+  text-decoration: none;
+  font-size: 25px;
+  border: 2px solid #fff;
+  background-color: #000;
+  padding: 15px;
+  margin: -3px;
+  border-top: none;
+}
+
+.header a:nth-child(1) {
+  border-radius: 0 0 0 10px;
+}
+
+.header a:nth-child(3) {
+  border-radius: 0 0 10px 0;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 30px;
+}
+
+.container .card:nth-child(1) .card-off::after {
+  content: '261';
+}
+
+.container .card:nth-child(1) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/261.webp);
+}
+
+.container .card:nth-child(2) .card-off::after {
+  content: '262';
+}
+
+.container .card:nth-child(2) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/262.webp);
+}
+
+.container .card:nth-child(3) .card-off::after {
+  content: '263';
+}
+
+.container .card:nth-child(3) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/263.webp);
+}
+
+.container .card:nth-child(4) .card-off::after {
+  content: '264';
+}
+
+.container .card:nth-child(4) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/264.webp);
+}
+
+.container .card:nth-child(5) .card-off::after {
+  content: '265';
+}
+
+.container .card:nth-child(5) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/265.webp);
+}
+
+.container .card:nth-child(6) .card-off::after {
+  content: '266';
+}
+
+.container .card:nth-child(6) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/266.webp);
+}
+
+.container .card:nth-child(7) .card-off::after {
+  content: '267';
+}
+
+.container .card:nth-child(7) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/267.webp);
+}
+
+.container .card:nth-child(8) .card-off::after {
+  content: '268';
+}
+
+.container .card:nth-child(8) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/268.webp);
+}
+
+.container .card:nth-child(9) .card-off::after {
+  content: '269';
+}
+
+.container .card:nth-child(9) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/269.webp);
+}
+
+.container .card:nth-child(10) .card-off::after {
+  content: '270';
+}
+
+.container .card:nth-child(10) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/270.webp);
+}
+
+.container .card:nth-child(11) .card-off::after {
+  content: '271';
+}
+
+.container .card:nth-child(11) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/271.webp);
+}
+
+.container .card:nth-child(12) .card-off::after {
+  content: '272';
+}
+
+.container .card:nth-child(12) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/272.webp);
+}
+
+.container .card:nth-child(13) .card-off::after {
+  content: '273';
+}
+
+.container .card:nth-child(13) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/273.webp);
+}
+
+.container .card:nth-child(14) .card-off::after {
+  content: '274';
+}
+
+.container .card:nth-child(14) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/274.webp);
+}
+
+.container .card:nth-child(15) .card-off::after {
+  content: '275';
+}
+
+.container .card:nth-child(15) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/275.webp);
+}
+
+.container .card:nth-child(16) .card-off::after {
+  content: '276';
+}
+
+.container .card:nth-child(16) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/276.webp);
+}
+
+.container .card:nth-child(17) .card-off::after {
+  content: '277';
+}
+
+.container .card:nth-child(17) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/277.webp);
+}
+
+.container .card:nth-child(18) .card-off::after {
+  content: '278';
+}
+
+.container .card:nth-child(18) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/278.webp);
+}
+
+.container .card:nth-child(19) .card-off::after {
+  content: '279';
+}
+
+.container .card:nth-child(19) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/279.webp);
+}
+
+.container .card:nth-child(20) .card-off::after {
+  content: '280';
+}
+
+.container .card:nth-child(20) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/280.webp);
+}
+
+.container .card:nth-child(21) .card-off::after {
+  content: '281';
+}
+
+.container .card:nth-child(21) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/281.webp);
+}
+
+.container .card:nth-child(22) .card-off::after {
+  content: '282';
+}
+
+.container .card:nth-child(22) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/282.webp);
+}
+
+.container .card:nth-child(23) .card-off::after {
+  content: '283';
+}
+
+.container .card:nth-child(23) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/283.webp);
+}
+
+.container .card:nth-child(24) .card-off::after {
+  content: '284';
+}
+
+.container .card:nth-child(24) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/284.webp);
+}
+
+.container .card:nth-child(25) .card-off::after {
+  content: '285';
+}
+
+.container .card:nth-child(25) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/285.webp);
+}
+
+.container .card:nth-child(26) .card-off::after {
+  content: '286';
+}
+
+.container .card:nth-child(26) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/286.webp);
+}
+
+.container .card:nth-child(27) .card-off::after {
+  content: '287';
+}
+
+.container .card:nth-child(27) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/287.webp);
+}
+
+.container .card:nth-child(28) .card-off::after {
+  content: '288';
+}
+
+.container .card:nth-child(28) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/288.webp);
+}
+
+.container .card:nth-child(29) .card-off::after {
+  content: '289';
+}
+
+.container .card:nth-child(29) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/289.webp);
+}
+
+.container .card:nth-child(30) .card-off::after {
+  content: '290';
+}
+
+.container .card:nth-child(30) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/290.webp);
+}
+
+.container .card:nth-child(31) .card-off::after {
+  content: '291';
+}
+
+.container .card:nth-child(31) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/291.webp);
+}
+
+.container .card:nth-child(32) .card-off::after {
+  content: '292';
+}
+
+.container .card:nth-child(32) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/292.webp);
+}
+
+.container .card:nth-child(33) .card-off::after {
+  content: '293';
+}
+
+.container .card:nth-child(33) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/293.webp);
+}
+
+.container .card:nth-child(34) .card-off::after {
+  content: '294';
+}
+
+.container .card:nth-child(34) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/294.webp);
+}
+
+.container .card:nth-child(35) .card-off::after {
+  content: '295';
+}
+
+.container .card:nth-child(35) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/295.webp);
+}
+
+.container .card:nth-child(36) .card-off::after {
+  content: '296';
+}
+
+.container .card:nth-child(36) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/296.webp);
+}
+
+.container .card:nth-child(37) .card-off::after {
+  content: '297';
+}
+
+.container .card:nth-child(37) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/297.webp);
+}
+
+.container .card:nth-child(38) .card-off::after {
+  content: '298';
+}
+
+.container .card:nth-child(38) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/298.webp);
+}
+
+.container .card:nth-child(39) .card-off::after {
+  content: '299';
+}
+
+.container .card:nth-child(39) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/299.webp);
+}
+
+.container .card:nth-child(40) .card-off::after {
+  content: '300';
+}
+
+.container .card:nth-child(40) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/300.webp);
+}
+
+.container .card:nth-child(41) .card-off::after {
+  content: '301';
+}
+
+.container .card:nth-child(41) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/301.webp);
+}
+
+.container .card:nth-child(42) .card-off::after {
+  content: '302';
+}
+
+.container .card:nth-child(42) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/302.webp);
+}
+
+.container .card:nth-child(43) .card-off::after {
+  content: '303';
+}
+
+.container .card:nth-child(43) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/303.webp);
+}
+
+.container .card:nth-child(44) .card-off::after {
+  content: '304';
+}
+
+.container .card:nth-child(44) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/304.webp);
+}
+
+.container .card:nth-child(45) .card-off::after {
+  content: '305';
+}
+
+.container .card:nth-child(45) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/305.webp);
+}
+
+.container .card:nth-child(46) .card-off::after {
+  content: '306';
+}
+
+.container .card:nth-child(46) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/306.webp);
+}
+
+.container .card:nth-child(47) .card-off::after {
+  content: '307';
+}
+
+.container .card:nth-child(47) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/307.webp);
+}
+
+.container .card:nth-child(48) .card-off::after {
+  content: '308';
+}
+
+.container .card:nth-child(48) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/308.webp);
+}
+
+.container .card:nth-child(49) .card-off::after {
+  content: '309';
+}
+
+.container .card:nth-child(49) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/309.webp);
+}
+
+.container .card:nth-child(50) .card-off::after {
+  content: '310';
+}
+
+.container .card:nth-child(50) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/310.webp);
+}
+
+.container .card:nth-child(51) .card-off::after {
+  content: '311';
+}
+
+.container .card:nth-child(51) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/311.webp);
+}
+
+.container .card:nth-child(52) .card-off::after {
+  content: '312';
+}
+
+.container .card:nth-child(52) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/312.webp);
+}
+
+.container .card:nth-child(53) .card-off::after {
+  content: '313';
+}
+
+.container .card:nth-child(53) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/313.webp);
+}
+
+.container .card:nth-child(54) .card-off::after {
+  content: '314';
+}
+
+.container .card:nth-child(54) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/314.webp);
+}
+
+.container .card:nth-child(55) .card-off::after {
+  content: '315';
+}
+
+.container .card:nth-child(55) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/315.webp);
+}
+
+.container .card:nth-child(56) .card-off::after {
+  content: '316';
+}
+
+.container .card:nth-child(56) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/316.webp);
+}
+
+.container .card:nth-child(57) .card-off::after {
+  content: '317';
+}
+
+.container .card:nth-child(57) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/317.webp);
+}
+
+.container .card:nth-child(58) .card-off::after {
+  content: '318';
+}
+
+.container .card:nth-child(58) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/318.webp);
+}
+
+.container .card:nth-child(59) .card-off::after {
+  content: '319';
+}
+
+.container .card:nth-child(59) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/319.webp);
+}
+
+.container .card:nth-child(60) .card-off::after {
+  content: '320';
+}
+
+.container .card:nth-child(60) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/320.webp);
+}
+
+.container .card:nth-child(61) .card-off::after {
+  content: '321';
+}
+
+.container .card:nth-child(61) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/321.webp);
+}
+
+.container .card:nth-child(62) .card-off::after {
+  content: '322';
+}
+
+.container .card:nth-child(62) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/322.webp);
+}
+
+.container .card:nth-child(63) .card-off::after {
+  content: '323';
+}
+
+.container .card:nth-child(63) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/323.webp);
+}
+
+.container .card:nth-child(64) .card-off::after {
+  content: '324';
+}
+
+.container .card:nth-child(64) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/324.webp);
+}
+
+.container .card:nth-child(65) .card-off::after {
+  content: '325';
+}
+
+.container .card:nth-child(65) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/325.webp);
+}
+
+.container .card:nth-child(66) .card-off::after {
+  content: '326';
+}
+
+.container .card:nth-child(66) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/326.webp);
+}
+
+.container .card:nth-child(67) .card-off::after {
+  content: '327';
+}
+
+.container .card:nth-child(67) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/327.webp);
+}
+
+.container .card:nth-child(68) .card-off::after {
+  content: '328';
+}
+
+.container .card:nth-child(68) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/328.webp);
+}
+
+.container .card:nth-child(69) .card-off::after {
+  content: '329';
+}
+
+.container .card:nth-child(69) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/329.webp);
+}
+
+.container .card:nth-child(70) .card-off::after {
+  content: '330';
+}
+
+.container .card:nth-child(70) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/330.webp);
+}
+
+.container .card:nth-child(71) .card-off::after {
+  content: '331';
+}
+
+.container .card:nth-child(71) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/331.webp);
+}
+
+.container .card:nth-child(72) .card-off::after {
+  content: '332';
+}
+
+.container .card:nth-child(72) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/332.webp);
+}
+
+.container .card:nth-child(73) .card-off::after {
+  content: '333';
+}
+
+.container .card:nth-child(73) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/333.webp);
+}
+
+.container .card:nth-child(74) .card-off::after {
+  content: '334';
+}
+
+.container .card:nth-child(74) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/334.webp);
+}
+
+.container .card:nth-child(75) .card-off::after {
+  content: '335';
+}
+
+.container .card:nth-child(75) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/335.webp);
+}
+
+.container .card:nth-child(76) .card-off::after {
+  content: '336';
+}
+
+.container .card:nth-child(76) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/336.webp);
+}
+
+.container .card:nth-child(77) .card-off::after {
+  content: '337';
+}
+
+.container .card:nth-child(77) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/337.webp);
+}
+
+.container .card:nth-child(78) .card-off::after {
+  content: '338';
+}
+
+.container .card:nth-child(78) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/338.webp);
+}
+
+.container .card:nth-child(79) .card-off::after {
+  content: '339';
+}
+
+.container .card:nth-child(79) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/339.webp);
+}
+
+.container .card:nth-child(80) .card-off::after {
+  content: '340';
+}
+
+.container .card:nth-child(80) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/340.webp);
+}
+
+.container .card:nth-child(81) .card-off::after {
+  content: '341';
+}
+
+.container .card:nth-child(81) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/341.webp);
+}
+
+.container .card:nth-child(82) .card-off::after {
+  content: '342';
+}
+
+.container .card:nth-child(82) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/342.webp);
+}
+
+.container .card:nth-child(83) .card-off::after {
+  content: '343';
+}
+
+.container .card:nth-child(83) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/343.webp);
+}
+
+.container .card:nth-child(84) .card-off::after {
+  content: '344';
+}
+
+.container .card:nth-child(84) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/344.webp);
+}
+
+.container .card:nth-child(85) .card-off::after {
+  content: '345';
+}
+
+.container .card:nth-child(85) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/345.webp);
+}
+
+.container .card:nth-child(86) .card-off::after {
+  content: '346';
+}
+
+.container .card:nth-child(86) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/346.webp);
+}
+
+.container .card:nth-child(87) .card-off::after {
+  content: '347';
+}
+
+.container .card:nth-child(87) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/347.webp);
+}
+
+.container .card:nth-child(88) .card-off::after {
+  content: '348';
+}
+
+.container .card:nth-child(88) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/348.webp);
+}
+
+.container .card:nth-child(89) .card-off::after {
+  content: '349';
+}
+
+.container .card:nth-child(89) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/349.webp);
+}
+
+.container .card:nth-child(90) .card-off::after {
+  content: '350';
+}
+
+.container .card:nth-child(90) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/350.webp);
+}
+
+.container .card:nth-child(91) .card-off::after {
+  content: '351';
+}
+
+.container .card:nth-child(91) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/351.webp);
+}
+
+.container .card:nth-child(92) .card-off::after {
+  content: '352';
+}
+
+.container .card:nth-child(92) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/352.webp);
+}
+
+.container .card:nth-child(93) .card-off::after {
+  content: '353';
+}
+
+.container .card:nth-child(93) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/353.webp);
+}
+
+.container .card:nth-child(94) .card-off::after {
+  content: '354';
+}
+
+.container .card:nth-child(94) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/354.webp);
+}
+
+.container .card:nth-child(95) .card-off::after {
+  content: '355';
+}
+
+.container .card:nth-child(95) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/355.webp);
+}
+
+.container .card:nth-child(96) .card-off::after {
+  content: '356';
+}
+
+.container .card:nth-child(96) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/356.webp);
+}
+
+.container .card:nth-child(97) .card-off::after {
+  content: '357';
+}
+
+.container .card:nth-child(97) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/357.webp);
+}
+
+.container .card:nth-child(98) .card-off::after {
+  content: '358';
+}
+
+.container .card:nth-child(98) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/358.webp);
+}
+
+.container .card:nth-child(99) .card-off::after {
+  content: '359';
+}
+
+.container .card:nth-child(99) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/359.webp);
+}
+
+.container .card:nth-child(100) .card-off::after {
+  content: '360';
+}
+
+.container .card:nth-child(100) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/360.webp);
+}
+
+.container .card:nth-child(101) .card-off::after {
+  content: '361';
+}
+
+.container .card:nth-child(101) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/361.webp);
+}
+
+.container .card:nth-child(102) .card-off::after {
+  content: '362';
+}
+
+.container .card:nth-child(102) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/362.webp);
+}
+
+.container .card:nth-child(103) .card-off::after {
+  content: '363';
+}
+
+.container .card:nth-child(103) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/363.webp);
+}
+
+.container .card:nth-child(104) .card-off::after {
+  content: '364';
+}
+
+.container .card:nth-child(104) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/364.webp);
+}
+
+.container .card:nth-child(105) .card-off::after {
+  content: '365';
+}
+
+.container .card:nth-child(105) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/365.webp);
+}
+
+.container .card:nth-child(106) .card-off::after {
+  content: '366';
+}
+
+.container .card:nth-child(106) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/366.webp);
+}
+
+.container .card:nth-child(107) .card-off::after {
+  content: '367';
+}
+
+.container .card:nth-child(107) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/367.webp);
+}
+
+.container .card:nth-child(108) .card-off::after {
+  content: '368';
+}
+
+.container .card:nth-child(108) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/368.webp);
+}
+
+.container .card:nth-child(109) .card-off::after {
+  content: '369';
+}
+
+.container .card:nth-child(109) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/369.webp);
+}
+
+.container .card:nth-child(110) .card-off::after {
+  content: '370';
+}
+
+.container .card:nth-child(110) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/370.webp);
+}
+
+.container .card:nth-child(111) .card-off::after {
+  content: '371';
+}
+
+.container .card:nth-child(111) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/371.webp);
+}
+
+.container .card:nth-child(112) .card-off::after {
+  content: '372';
+}
+
+.container .card:nth-child(112) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/372.webp);
+}
+
+.container .card:nth-child(113) .card-off::after {
+  content: '373';
+}
+
+.container .card:nth-child(113) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/373.webp);
+}
+
+.container .card:nth-child(114) .card-off::after {
+  content: '374';
+}
+
+.container .card:nth-child(114) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/374.webp);
+}
+
+.container .card:nth-child(115) .card-off::after {
+  content: '375';
+}
+
+.container .card:nth-child(115) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/375.webp);
+}
+
+.container .card:nth-child(116) .card-off::after {
+  content: '376';
+}
+
+.container .card:nth-child(116) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/376.webp);
+}
+
+.container .card:nth-child(117) .card-off::after {
+  content: '377';
+}
+
+.container .card:nth-child(117) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/377.webp);
+}
+
+.container .card:nth-child(118) .card-off::after {
+  content: '378';
+}
+
+.container .card:nth-child(118) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/378.webp);
+}
+
+.container .card:nth-child(119) .card-off::after {
+  content: '379';
+}
+
+.container .card:nth-child(119) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/379.webp);
+}
+
+.container .card:nth-child(120) .card-off::after {
+  content: '380';
+}
+
+.container .card:nth-child(120) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/380.webp);
+}
+
+.container .card:nth-child(121) .card-off::after {
+  content: '381';
+}
+
+.container .card:nth-child(121) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/381.webp);
+}
+
+.container .card:nth-child(122) .card-off::after {
+  content: '382';
+}
+
+.container .card:nth-child(122) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/382.webp);
+}
+
+.container .card:nth-child(123) .card-off::after {
+  content: '383';
+}
+
+.container .card:nth-child(123) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/383.webp);
+}
+
+.container .card:nth-child(124) .card-off::after {
+  content: '384';
+}
+
+.container .card:nth-child(124) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/384.webp);
+}
+
+.container .card:nth-child(125) .card-off::after {
+  content: '385';
+}
+
+.container .card:nth-child(125) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/385.webp);
+}
+
+.container .card:nth-child(126) .card-off::after {
+  content: '386';
+}
+
+.container .card:nth-child(126) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/386.webp);
+}
+
+.container .card:nth-child(127) .card-off::after {
+  content: '387';
+}
+
+.container .card:nth-child(127) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/387.webp);
+}
+
+.container .card:nth-child(128) .card-off::after {
+  content: '388';
+}
+
+.container .card:nth-child(128) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/388.webp);
+}
+
+.container .card:nth-child(129) .card-off::after {
+  content: '389';
+}
+
+.container .card:nth-child(129) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/389.webp);
+}
+
+.container .card:nth-child(130) .card-off::after {
+  content: '390';
+}
+
+.container .card:nth-child(130) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/390.webp);
+}
+
+.container .card:nth-child(131) .card-off::after {
+  content: '391';
+}
+
+.container .card:nth-child(131) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/391.webp);
+}
+
+.container .card:nth-child(132) .card-off::after {
+  content: '392';
+}
+
+.container .card:nth-child(132) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/392.webp);
+}
+
+.container .card:nth-child(133) .card-off::after {
+  content: '393';
+}
+
+.container .card:nth-child(133) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/393.webp);
+}
+
+.container .card:nth-child(134) .card-off::after {
+  content: '394';
+}
+
+.container .card:nth-child(134) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/394.webp);
+}
+
+.container .card:nth-child(135) .card-off::after {
+  content: '395';
+}
+
+.container .card:nth-child(135) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/395.webp);
+}
+
+.container .card:nth-child(136) .card-off::after {
+  content: '396';
+}
+
+.container .card:nth-child(136) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/396.webp);
+}
+
+.container .card:nth-child(137) .card-off::after {
+  content: '397';
+}
+
+.container .card:nth-child(137) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/397.webp);
+}
+
+.container .card:nth-child(138) .card-off::after {
+  content: '398';
+}
+
+.container .card:nth-child(138) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/398.webp);
+}
+
+.container .card:nth-child(139) .card-off::after {
+  content: '399';
+}
+
+.container .card:nth-child(139) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/399.webp);
+}
+
+.container .card:nth-child(140) .card-off::after {
+  content: '400';
+}
+
+.container .card:nth-child(140) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/400.webp);
+}
+
+.container .card:nth-child(141) .card-off::after {
+  content: '401';
+}
+
+.container .card:nth-child(141) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/401.webp);
+}
+
+.container .card:nth-child(142) .card-off::after {
+  content: '402';
+}
+
+.container .card:nth-child(142) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/402.webp);
+}
+
+.container .card:nth-child(143) .card-off::after {
+  content: '403';
+}
+
+.container .card:nth-child(143) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/403.webp);
+}
+
+.container .card:nth-child(144) .card-off::after {
+  content: '404';
+}
+
+.container .card:nth-child(144) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/404.webp);
+}
+
+.container .card:nth-child(145) .card-off::after {
+  content: '405';
+}
+
+.container .card:nth-child(145) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/405.webp);
+}
+
+.container .card:nth-child(146) .card-off::after {
+  content: '406';
+}
+
+.container .card:nth-child(146) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/406.webp);
+}
+
+.container .card:nth-child(147) .card-off::after {
+  content: '407';
+}
+
+.container .card:nth-child(147) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/407.webp);
+}
+
+.container .card:nth-child(148) .card-off::after {
+  content: '408';
+}
+
+.container .card:nth-child(148) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/408.webp);
+}
+
+.container .card:nth-child(149) .card-off::after {
+  content: '409';
+}
+
+.container .card:nth-child(149) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/409.webp);
+}
+
+.container .card:nth-child(150) .card-off::after {
+  content: '410';
+}
+
+.container .card:nth-child(150) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/410.webp);
+}
+
+.container .card:nth-child(151) .card-off::after {
+  content: '411';
+}
+
+.container .card:nth-child(151) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/411.webp);
+}
+
+.container .card:nth-child(152) .card-off::after {
+  content: '412';
+}
+
+.container .card:nth-child(152) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/412.webp);
+}
+
+.container .card:nth-child(153) .card-off::after {
+  content: '413';
+}
+
+.container .card:nth-child(153) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/413.webp);
+}
+
+.container .card:nth-child(154) .card-off::after {
+  content: '414';
+}
+
+.container .card:nth-child(154) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/414.webp);
+}
+
+.container .card:nth-child(155) .card-off::after {
+  content: '415';
+}
+
+.container .card:nth-child(155) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/415.webp);
+}
+
+.container .card:nth-child(156) .card-off::after {
+  content: '416';
+}
+
+.container .card:nth-child(156) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/416.webp);
+}
+
+.container .card:nth-child(157) .card-off::after {
+  content: '417';
+}
+
+.container .card:nth-child(157) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/417.webp);
+}
+
+.container .card:nth-child(158) .card-off::after {
+  content: '418';
+}
+
+.container .card:nth-child(158) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/418.webp);
+}
+
+.container .card:nth-child(159) .card-off::after {
+  content: '419';
+}
+
+.container .card:nth-child(159) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/419.webp);
+}
+
+.container .card:nth-child(160) .card-off::after {
+  content: '420';
+}
+
+.container .card:nth-child(160) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/420.webp);
+}
+
+.container .card:nth-child(161) .card-off::after {
+  content: '421';
+}
+
+.container .card:nth-child(161) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/421.webp);
+}
+
+.container .card:nth-child(162) .card-off::after {
+  content: '422';
+}
+
+.container .card:nth-child(162) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/422.webp);
+}
+
+.container .card:nth-child(163) .card-off::after {
+  content: '423';
+}
+
+.container .card:nth-child(163) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/423.webp);
+}
+
+.container .card:nth-child(164) .card-off::after {
+  content: '424';
+}
+
+.container .card:nth-child(164) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/424.webp);
+}
+
+.container .card:nth-child(165) .card-off::after {
+  content: '425';
+}
+
+.container .card:nth-child(165) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/425.webp);
+}
+
+.container .card:nth-child(166) .card-off::after {
+  content: '426';
+}
+
+.container .card:nth-child(166) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/426.webp);
+}
+
+.container .card:nth-child(167) .card-off::after {
+  content: '427';
+}
+
+.container .card:nth-child(167) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/427.webp);
+}
+
+.container .card:nth-child(168) .card-off::after {
+  content: '428';
+}
+
+.container .card:nth-child(168) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/428.webp);
+}
+
+.container .card:nth-child(169) .card-off::after {
+  content: '429';
+}
+
+.container .card:nth-child(169) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/429.webp);
+}
+
+.container .card:nth-child(170) .card-off::after {
+  content: '430';
+}
+
+.container .card:nth-child(170) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/430.webp);
+}
+
+.container .card:nth-child(171) .card-off::after {
+  content: '431';
+}
+
+.container .card:nth-child(171) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/431.webp);
+}
+
+.container .card:nth-child(172) .card-off::after {
+  content: '432';
+}
+
+.container .card:nth-child(172) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/432.webp);
+}
+
+.container .card:nth-child(173) .card-off::after {
+  content: '433';
+}
+
+.container .card:nth-child(173) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/433.webp);
+}
+
+.container .card:nth-child(174) .card-off::after {
+  content: '434';
+}
+
+.container .card:nth-child(174) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/434.webp);
+}
+
+.container .card:nth-child(175) .card-off::after {
+  content: '435';
+}
+
+.container .card:nth-child(175) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/435.webp);
+}
+
+.container .card:nth-child(176) .card-off::after {
+  content: '436';
+}
+
+.container .card:nth-child(176) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/436.webp);
+}
+
+.container .card:nth-child(177) .card-off::after {
+  content: '437';
+}
+
+.container .card:nth-child(177) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/437.webp);
+}
+
+.container .card:nth-child(178) .card-off::after {
+  content: '438';
+}
+
+.container .card:nth-child(178) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/438.webp);
+}
+
+.container .card:nth-child(179) .card-off::after {
+  content: '439';
+}
+
+.container .card:nth-child(179) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/439.webp);
+}
+
+.container .card:nth-child(180) .card-off::after {
+  content: '440';
+}
+
+.container .card:nth-child(180) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/440.webp);
+}
+
+.container .card:nth-child(181) .card-off::after {
+  content: '441';
+}
+
+.container .card:nth-child(181) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/441.webp);
+}
+
+.container .card:nth-child(182) .card-off::after {
+  content: '442';
+}
+
+.container .card:nth-child(182) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/442.webp);
+}
+
+.container .card:nth-child(183) .card-off::after {
+  content: '443';
+}
+
+.container .card:nth-child(183) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/443.webp);
+}
+
+.container .card:nth-child(184) .card-off::after {
+  content: '444';
+}
+
+.container .card:nth-child(184) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/444.webp);
+}
+
+.container .card:nth-child(185) .card-off::after {
+  content: '445';
+}
+
+.container .card:nth-child(185) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/445.webp);
+}
+
+.container .card:nth-child(186) .card-off::after {
+  content: '446';
+}
+
+.container .card:nth-child(186) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/446.webp);
+}
+
+.container .card:nth-child(187) .card-off::after {
+  content: '447';
+}
+
+.container .card:nth-child(187) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/447.webp);
+}
+
+.container .card:nth-child(188) .card-off::after {
+  content: '448';
+}
+
+.container .card:nth-child(188) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/448.webp);
+}
+
+.container .card:nth-child(189) .card-off::after {
+  content: '449';
+}
+
+.container .card:nth-child(189) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/449.webp);
+}
+
+.container .card:nth-child(190) .card-off::after {
+  content: '450';
+}
+
+.container .card:nth-child(190) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/450.webp);
+}
+
+.container .card:nth-child(191) .card-off::after {
+  content: '451';
+}
+
+.container .card:nth-child(191) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/451.webp);
+}
+
+.container .card:nth-child(192) .card-off::after {
+  content: '452';
+}
+
+.container .card:nth-child(192) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/452.webp);
+}
+
+.container .card:nth-child(193) .card-off::after {
+  content: '453';
+}
+
+.container .card:nth-child(193) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/453.webp);
+}
+
+.container .card:nth-child(194) .card-off::after {
+  content: '454';
+}
+
+.container .card:nth-child(194) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/454.webp);
+}
+
+.container .card:nth-child(195) .card-off::after {
+  content: '455';
+}
+
+.container .card:nth-child(195) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/455.webp);
+}
+
+.container .card:nth-child(196) .card-off::after {
+  content: '456';
+}
+
+.container .card:nth-child(196) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/456.webp);
+}
+
+.container .card:nth-child(197) .card-off::after {
+  content: '457';
+}
+
+.container .card:nth-child(197) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/457.webp);
+}
+
+.container .card:nth-child(198) .card-off::after {
+  content: '458';
+}
+
+.container .card:nth-child(198) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/458.webp);
+}
+
+.container .card:nth-child(199) .card-off::after {
+  content: '459';
+}
+
+.container .card:nth-child(199) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/459.webp);
+}
+
+.container .card:nth-child(200) .card-off::after {
+  content: '460';
+}
+
+.container .card:nth-child(200) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/460.webp);
+}
+
+.container .card:nth-child(201) .card-off::after {
+  content: '461';
+}
+
+.container .card:nth-child(201) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/461.webp);
+}
+
+.container .card:nth-child(202) .card-off::after {
+  content: '462';
+}
+
+.container .card:nth-child(202) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/462.webp);
+}
+
+.container .card:nth-child(203) .card-off::after {
+  content: '463';
+}
+
+.container .card:nth-child(203) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/463.webp);
+}
+
+.container .card:nth-child(204) .card-off::after {
+  content: '464';
+}
+
+.container .card:nth-child(204) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/464.webp);
+}
+
+.container .card:nth-child(205) .card-off::after {
+  content: '465';
+}
+
+.container .card:nth-child(205) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/465.webp);
+}
+
+.container .card:nth-child(206) .card-off::after {
+  content: '466';
+}
+
+.container .card:nth-child(206) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/466.webp);
+}
+
+.container .card:nth-child(207) .card-off::after {
+  content: '467';
+}
+
+.container .card:nth-child(207) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/467.webp);
+}
+
+.container .card:nth-child(208) .card-off::after {
+  content: '468';
+}
+
+.container .card:nth-child(208) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/468.webp);
+}
+
+.container .card:nth-child(209) .card-off::after {
+  content: '469';
+}
+
+.container .card:nth-child(209) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/469.webp);
+}
+
+.container .card:nth-child(210) .card-off::after {
+  content: '470';
+}
+
+.container .card:nth-child(210) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/470.webp);
+}
+
+.container .card:nth-child(211) .card-off::after {
+  content: '471';
+}
+
+.container .card:nth-child(211) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/471.webp);
+}
+
+.container .card:nth-child(212) .card-off::after {
+  content: '472';
+}
+
+.container .card:nth-child(212) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/472.webp);
+}
+
+.container .card:nth-child(213) .card-off::after {
+  content: '473';
+}
+
+.container .card:nth-child(213) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/473.webp);
+}
+
+.container .card:nth-child(214) .card-off::after {
+  content: '474';
+}
+
+.container .card:nth-child(214) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/474.webp);
+}
+
+.container .card:nth-child(215) .card-off::after {
+  content: '475';
+}
+
+.container .card:nth-child(215) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/475.webp);
+}
+
+.container .card:nth-child(216) .card-off::after {
+  content: '476';
+}
+
+.container .card:nth-child(216) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/476.webp);
+}
+
+.container .card:nth-child(217) .card-off::after {
+  content: '477';
+}
+
+.container .card:nth-child(217) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/477.webp);
+}
+
+.container .card:nth-child(218) .card-off::after {
+  content: '478';
+}
+
+.container .card:nth-child(218) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/478.webp);
+}
+
+.container .card:nth-child(219) .card-off::after {
+  content: '479';
+}
+
+.container .card:nth-child(219) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/479.webp);
+}
+
+.container .card:nth-child(220) .card-off::after {
+  content: '480';
+}
+
+.container .card:nth-child(220) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/480.webp);
+}
+
+.container .card:nth-child(221) .card-off::after {
+  content: '481';
+}
+
+.container .card:nth-child(221) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/481.webp);
+}
+
+.container .card:nth-child(222) .card-off::after {
+  content: '482';
+}
+
+.container .card:nth-child(222) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/482.webp);
+}
+
+.container .card:nth-child(223) .card-off::after {
+  content: '483';
+}
+
+.container .card:nth-child(223) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/483.webp);
+}
+
+.container .card:nth-child(224) .card-off::after {
+  content: '484';
+}
+
+.container .card:nth-child(224) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/484.webp);
+}
+
+.container .card:nth-child(225) .card-off::after {
+  content: '485';
+}
+
+.container .card:nth-child(225) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/485.webp);
+}
+
+.container .card:nth-child(226) .card-off::after {
+  content: '486';
+}
+
+.container .card:nth-child(226) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/486.webp);
+}
+
+.container .card:nth-child(227) .card-off::after {
+  content: '487';
+}
+
+.container .card:nth-child(227) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/487.webp);
+}
+
+.container .card:nth-child(228) .card-off::after {
+  content: '488';
+}
+
+.container .card:nth-child(228) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/488.webp);
+}
+
+.container .card:nth-child(229) .card-off::after {
+  content: '489';
+}
+
+.container .card:nth-child(229) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/489.webp);
+}
+
+.container .card:nth-child(230) .card-off::after {
+  content: '490';
+}
+
+.container .card:nth-child(230) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/490.webp);
+}
+
+.container .card:nth-child(231) .card-off::after {
+  content: '491';
+}
+
+.container .card:nth-child(231) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/491.webp);
+}
+
+.container .card:nth-child(232) .card-off::after {
+  content: '492';
+}
+
+.container .card:nth-child(232) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/492.webp);
+}
+
+.container .card:nth-child(233) .card-off::after {
+  content: '493';
+}
+
+.container .card:nth-child(233) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/493.webp);
+}
+
+.container .card:nth-child(234) .card-off::after {
+  content: '494';
+}
+
+.container .card:nth-child(234) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/494.webp);
+}
+
+.container .card:nth-child(235) .card-off::after {
+  content: '495';
+}
+
+.container .card:nth-child(235) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/495.webp);
+}
+
+.container .card:nth-child(236) .card-off::after {
+  content: '496';
+}
+
+.container .card:nth-child(236) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/496.webp);
+}
+
+.container .card:nth-child(237) .card-off::after {
+  content: '497';
+}
+
+.container .card:nth-child(237) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/497.webp);
+}
+
+.container .card:nth-child(238) .card-off::after {
+  content: '498';
+}
+
+.container .card:nth-child(238) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/498.webp);
+}
+
+.container .card:nth-child(239) .card-off::after {
+  content: '499';
+}
+
+.container .card:nth-child(239) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/499.webp);
+}
+
+.container .card:nth-child(240) .card-off::after {
+  content: '500';
+}
+
+.container .card:nth-child(240) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/500.webp);
+}
+
+.container .card:nth-child(241) .card-off::after {
+  content: '501';
+}
+
+.container .card:nth-child(241) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/501.webp);
+}
+
+.container .card:nth-child(242) .card-off::after {
+  content: '502';
+}
+
+.container .card:nth-child(242) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/502.webp);
+}
+
+.container .card:nth-child(243) .card-off::after {
+  content: '503';
+}
+
+.container .card:nth-child(243) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/503.webp);
+}
+
+.container .card:nth-child(244) .card-off::after {
+  content: '504';
+}
+
+.container .card:nth-child(244) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/504.webp);
+}
+
+.container .card:nth-child(245) .card-off::after {
+  content: '505';
+}
+
+.container .card:nth-child(245) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/505.webp);
+}
+
+.container .card:nth-child(246) .card-off::after {
+  content: '506';
+}
+
+.container .card:nth-child(246) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/506.webp);
+}
+
+.container .card:nth-child(247) .card-off::after {
+  content: '507';
+}
+
+.container .card:nth-child(247) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/507.webp);
+}
+
+.container .card:nth-child(248) .card-off::after {
+  content: '508';
+}
+
+.container .card:nth-child(248) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/508.webp);
+}
+
+.container .card:nth-child(249) .card-off::after {
+  content: '509';
+}
+
+.container .card:nth-child(249) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/509.webp);
+}
+
+.container .card:nth-child(250) .card-off::after {
+  content: '510';
+}
+
+.container .card:nth-child(250) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/510.webp);
+}
+
+.container .card:nth-child(251) .card-off::after {
+  content: '511';
+}
+
+.container .card:nth-child(251) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/511.webp);
+}
+
+.container .card:nth-child(252) .card-off::after {
+  content: '512';
+}
+
+.container .card:nth-child(252) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/512.webp);
+}
+
+.container .card:nth-child(253) .card-off::after {
+  content: '513';
+}
+
+.container .card:nth-child(253) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/513.webp);
+}
+
+.container .card:nth-child(254) .card-off::after {
+  content: '514';
+}
+
+.container .card:nth-child(254) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/514.webp);
+}
+
+.container .card:nth-child(255) .card-off::after {
+  content: '515';
+}
+
+.container .card:nth-child(255) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/515.webp);
+}
+
+.container .card:nth-child(256) .card-off::after {
+  content: '516';
+}
+
+.container .card:nth-child(256) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/516.webp);
+}
+
+.container .card:nth-child(257) .card-off::after {
+  content: '517';
+}
+
+.container .card:nth-child(257) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/517.webp);
+}
+
+.container .card:nth-child(258) .card-off::after {
+  content: '518';
+}
+
+.container .card:nth-child(258) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/518.webp);
+}
+
+.container .card:nth-child(259) .card-off::after {
+  content: '519';
+}
+
+.container .card:nth-child(259) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/519.webp);
+}
+
+.container .card:nth-child(260) .card-off::after {
+  content: '520';
+}
+
+.container .card:nth-child(260) .card-on {
+  background-image: url(../images/cards/ninja-turtles/2/520.webp);
+}
+
+.card {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  margin: 30px;
+  margin-bottom: 60px;
+  border-radius: 15px;
+}
+
+.card .card-off::after {
+  content: '1';
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+  font-family: 'Space';
+  width: 90px;
+  height: 30px;
+  border: 4px solid #fff;
+  background-color: #fff;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: -40px;
+  right: -65px;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+}
+
+.card .card-on::after {
+  content: '';
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+  font-family: 'Space';
+  width: 90px;
+  height: 30px;
+  border: 4px solid #fff;
+  background-color: #fff;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: -40px;
+  right: -65px;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+}
+
+.card-off {
+  background-image: url(../images/cards/ninja-turtles/1/0.webp);
+  height: 315px;
+  width: 230px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
+  border: 3px solid #fff;
+  border-radius: 15px;
+}
+
+.card-on {
+  background-image: url(../images/cards/ninja-turtles/2/1.webp);
+  height: 315px;
+  width: 230px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
+  border: 3px solid #fff;
+  border-radius: 15px;
+}

@@ -1,0 +1,1562 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+:focus {
+  outline: 0;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  max-width: 100%;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+figure {
+  margin: 0;
+}
+
+form {
+  margin: 0;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+@font-face {
+  font-family: 'space';
+  src: url("../fonts/space.eot");
+  src: local("☺"), url("../fonts/space.woff") format("woff"), url("../fonts/space.ttf") format("truetype"), url("../fonts/space.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  background-image: url(../images/background.webp);
+  padding-top: 120px;
+}
+
+.header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 50%;
+  margin-left: -155px;
+}
+
+.header a {
+  display: inline-block;
+  outline: none;
+  padding: 0px 30px;
+  color: #fff;
+  font-family: 'space';
+  text-decoration: none;
+  font-size: 25px;
+  border: 2px solid #fff;
+  background-color: #000;
+  padding: 15px;
+  margin: -3px;
+  border-top: none;
+  border-radius: 0 0 10px 0;
+}
+
+.header a:nth-child(1) {
+  border-radius: 0 0 0 10px;
+}
+
+.header a:nth-child(3) {
+  border-radius: 0 0 10px 0;
+  visibility: hidden;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 30px;
+}
+
+.container .card:nth-child(1) .card-off::after {
+  content: '1';
+}
+
+.container .card:nth-child(1) .card-on {
+  background-image: url(../images/cards/super-racing/3/1.webp);
+}
+
+.container .card:nth-child(2) .card-off::after {
+  content: '2';
+}
+
+.container .card:nth-child(2) .card-on {
+  background-image: url(../images/cards/super-racing/3/2.webp);
+}
+
+.container .card:nth-child(3) .card-off::after {
+  content: '3';
+}
+
+.container .card:nth-child(3) .card-on {
+  background-image: url(../images/cards/super-racing/3/3.webp);
+}
+
+.container .card:nth-child(4) .card-off::after {
+  content: '4';
+}
+
+.container .card:nth-child(4) .card-on {
+  background-image: url(../images/cards/super-racing/3/4.webp);
+}
+
+.container .card:nth-child(5) .card-off::after {
+  content: '5';
+}
+
+.container .card:nth-child(5) .card-on {
+  background-image: url(../images/cards/super-racing/3/5.webp);
+}
+
+.container .card:nth-child(6) .card-off::after {
+  content: '6';
+}
+
+.container .card:nth-child(6) .card-on {
+  background-image: url(../images/cards/super-racing/3/6.webp);
+}
+
+.container .card:nth-child(7) .card-off::after {
+  content: '7';
+}
+
+.container .card:nth-child(7) .card-on {
+  background-image: url(../images/cards/super-racing/3/7.webp);
+}
+
+.container .card:nth-child(8) .card-off::after {
+  content: '8';
+}
+
+.container .card:nth-child(8) .card-on {
+  background-image: url(../images/cards/super-racing/3/8.webp);
+}
+
+.container .card:nth-child(9) .card-off::after {
+  content: '9';
+}
+
+.container .card:nth-child(9) .card-on {
+  background-image: url(../images/cards/super-racing/3/9.webp);
+}
+
+.container .card:nth-child(10) .card-off::after {
+  content: '10';
+}
+
+.container .card:nth-child(10) .card-on {
+  background-image: url(../images/cards/super-racing/3/10.webp);
+}
+
+.container .card:nth-child(11) .card-off::after {
+  content: '11';
+}
+
+.container .card:nth-child(11) .card-on {
+  background-image: url(../images/cards/super-racing/3/11.webp);
+}
+
+.container .card:nth-child(12) .card-off::after {
+  content: '12';
+}
+
+.container .card:nth-child(12) .card-on {
+  background-image: url(../images/cards/super-racing/3/12.webp);
+}
+
+.container .card:nth-child(13) .card-off::after {
+  content: '13';
+}
+
+.container .card:nth-child(13) .card-on {
+  background-image: url(../images/cards/super-racing/3/13.webp);
+}
+
+.container .card:nth-child(14) .card-off::after {
+  content: '14';
+}
+
+.container .card:nth-child(14) .card-on {
+  background-image: url(../images/cards/super-racing/3/14.webp);
+}
+
+.container .card:nth-child(15) .card-off::after {
+  content: '15';
+}
+
+.container .card:nth-child(15) .card-on {
+  background-image: url(../images/cards/super-racing/3/15.webp);
+}
+
+.container .card:nth-child(16) .card-off::after {
+  content: '16';
+}
+
+.container .card:nth-child(16) .card-on {
+  background-image: url(../images/cards/super-racing/3/16.webp);
+}
+
+.container .card:nth-child(17) .card-off::after {
+  content: '17';
+}
+
+.container .card:nth-child(17) .card-on {
+  background-image: url(../images/cards/super-racing/3/17.webp);
+}
+
+.container .card:nth-child(18) .card-off::after {
+  content: '18';
+}
+
+.container .card:nth-child(18) .card-on {
+  background-image: url(../images/cards/super-racing/3/18.webp);
+}
+
+.container .card:nth-child(19) .card-off::after {
+  content: '19';
+}
+
+.container .card:nth-child(19) .card-on {
+  background-image: url(../images/cards/super-racing/3/19.webp);
+}
+
+.container .card:nth-child(20) .card-off::after {
+  content: '20';
+}
+
+.container .card:nth-child(20) .card-on {
+  background-image: url(../images/cards/super-racing/3/20.webp);
+}
+
+.container .card:nth-child(21) .card-off::after {
+  content: '21';
+}
+
+.container .card:nth-child(21) .card-on {
+  background-image: url(../images/cards/super-racing/3/21.webp);
+}
+
+.container .card:nth-child(22) .card-off::after {
+  content: '22';
+}
+
+.container .card:nth-child(22) .card-on {
+  background-image: url(../images/cards/super-racing/3/22.webp);
+}
+
+.container .card:nth-child(23) .card-off::after {
+  content: '23';
+}
+
+.container .card:nth-child(23) .card-on {
+  background-image: url(../images/cards/super-racing/3/23.webp);
+}
+
+.container .card:nth-child(24) .card-off::after {
+  content: '24';
+}
+
+.container .card:nth-child(24) .card-on {
+  background-image: url(../images/cards/super-racing/3/24.webp);
+}
+
+.container .card:nth-child(25) .card-off::after {
+  content: '25';
+}
+
+.container .card:nth-child(25) .card-on {
+  background-image: url(../images/cards/super-racing/3/25.webp);
+}
+
+.container .card:nth-child(26) .card-off::after {
+  content: '26';
+}
+
+.container .card:nth-child(26) .card-on {
+  background-image: url(../images/cards/super-racing/3/26.webp);
+}
+
+.container .card:nth-child(27) .card-off::after {
+  content: '27';
+}
+
+.container .card:nth-child(27) .card-on {
+  background-image: url(../images/cards/super-racing/3/27.webp);
+}
+
+.container .card:nth-child(28) .card-off::after {
+  content: '28';
+}
+
+.container .card:nth-child(28) .card-on {
+  background-image: url(../images/cards/super-racing/3/28.webp);
+}
+
+.container .card:nth-child(29) .card-off::after {
+  content: '29';
+}
+
+.container .card:nth-child(29) .card-on {
+  background-image: url(../images/cards/super-racing/3/29.webp);
+}
+
+.container .card:nth-child(30) .card-off::after {
+  content: '30';
+}
+
+.container .card:nth-child(30) .card-on {
+  background-image: url(../images/cards/super-racing/3/30.webp);
+}
+
+.container .card:nth-child(31) .card-off::after {
+  content: '31';
+}
+
+.container .card:nth-child(31) .card-on {
+  background-image: url(../images/cards/super-racing/3/31.webp);
+}
+
+.container .card:nth-child(32) .card-off::after {
+  content: '32';
+}
+
+.container .card:nth-child(32) .card-on {
+  background-image: url(../images/cards/super-racing/3/32.webp);
+}
+
+.container .card:nth-child(33) .card-off::after {
+  content: '33';
+}
+
+.container .card:nth-child(33) .card-on {
+  background-image: url(../images/cards/super-racing/3/33.webp);
+}
+
+.container .card:nth-child(34) .card-off::after {
+  content: '34';
+}
+
+.container .card:nth-child(34) .card-on {
+  background-image: url(../images/cards/super-racing/3/34.webp);
+}
+
+.container .card:nth-child(35) .card-off::after {
+  content: '35';
+}
+
+.container .card:nth-child(35) .card-on {
+  background-image: url(../images/cards/super-racing/3/35.webp);
+}
+
+.container .card:nth-child(36) .card-off::after {
+  content: '36';
+}
+
+.container .card:nth-child(36) .card-on {
+  background-image: url(../images/cards/super-racing/3/36.webp);
+}
+
+.container .card:nth-child(37) .card-off::after {
+  content: '37';
+}
+
+.container .card:nth-child(37) .card-on {
+  background-image: url(../images/cards/super-racing/3/37.webp);
+}
+
+.container .card:nth-child(38) .card-off::after {
+  content: '38';
+}
+
+.container .card:nth-child(38) .card-on {
+  background-image: url(../images/cards/super-racing/3/38.webp);
+}
+
+.container .card:nth-child(39) .card-off::after {
+  content: '39';
+}
+
+.container .card:nth-child(39) .card-on {
+  background-image: url(../images/cards/super-racing/3/39.webp);
+}
+
+.container .card:nth-child(40) .card-off::after {
+  content: '40';
+}
+
+.container .card:nth-child(40) .card-on {
+  background-image: url(../images/cards/super-racing/3/40.webp);
+}
+
+.container .card:nth-child(41) .card-off::after {
+  content: '41';
+}
+
+.container .card:nth-child(41) .card-on {
+  background-image: url(../images/cards/super-racing/3/41.webp);
+}
+
+.container .card:nth-child(42) .card-off::after {
+  content: '42';
+}
+
+.container .card:nth-child(42) .card-on {
+  background-image: url(../images/cards/super-racing/3/42.webp);
+}
+
+.container .card:nth-child(43) .card-off::after {
+  content: '43';
+}
+
+.container .card:nth-child(43) .card-on {
+  background-image: url(../images/cards/super-racing/3/43.webp);
+}
+
+.container .card:nth-child(44) .card-off::after {
+  content: '44';
+}
+
+.container .card:nth-child(44) .card-on {
+  background-image: url(../images/cards/super-racing/3/44.webp);
+}
+
+.container .card:nth-child(45) .card-off::after {
+  content: '45';
+}
+
+.container .card:nth-child(45) .card-on {
+  background-image: url(../images/cards/super-racing/3/45.webp);
+}
+
+.container .card:nth-child(46) .card-off::after {
+  content: '46';
+}
+
+.container .card:nth-child(46) .card-on {
+  background-image: url(../images/cards/super-racing/3/46.webp);
+}
+
+.container .card:nth-child(47) .card-off::after {
+  content: '47';
+}
+
+.container .card:nth-child(47) .card-on {
+  background-image: url(../images/cards/super-racing/3/47.webp);
+}
+
+.container .card:nth-child(48) .card-off::after {
+  content: '48';
+}
+
+.container .card:nth-child(48) .card-on {
+  background-image: url(../images/cards/super-racing/3/48.webp);
+}
+
+.container .card:nth-child(49) .card-off::after {
+  content: '49';
+}
+
+.container .card:nth-child(49) .card-on {
+  background-image: url(../images/cards/super-racing/3/49.webp);
+}
+
+.container .card:nth-child(50) .card-off::after {
+  content: '50';
+}
+
+.container .card:nth-child(50) .card-on {
+  background-image: url(../images/cards/super-racing/3/50.webp);
+}
+
+.container .card:nth-child(51) .card-off::after {
+  content: '51';
+}
+
+.container .card:nth-child(51) .card-on {
+  background-image: url(../images/cards/super-racing/3/51.webp);
+}
+
+.container .card:nth-child(52) .card-off::after {
+  content: '52';
+}
+
+.container .card:nth-child(52) .card-on {
+  background-image: url(../images/cards/super-racing/3/52.webp);
+}
+
+.container .card:nth-child(53) .card-off::after {
+  content: '53';
+}
+
+.container .card:nth-child(53) .card-on {
+  background-image: url(../images/cards/super-racing/3/53.webp);
+}
+
+.container .card:nth-child(54) .card-off::after {
+  content: '54';
+}
+
+.container .card:nth-child(54) .card-on {
+  background-image: url(../images/cards/super-racing/3/54.webp);
+}
+
+.container .card:nth-child(55) .card-off::after {
+  content: '55';
+}
+
+.container .card:nth-child(55) .card-on {
+  background-image: url(../images/cards/super-racing/3/55.webp);
+}
+
+.container .card:nth-child(56) .card-off::after {
+  content: '56';
+}
+
+.container .card:nth-child(56) .card-on {
+  background-image: url(../images/cards/super-racing/3/56.webp);
+}
+
+.container .card:nth-child(57) .card-off::after {
+  content: '57';
+}
+
+.container .card:nth-child(57) .card-on {
+  background-image: url(../images/cards/super-racing/3/57.webp);
+}
+
+.container .card:nth-child(58) .card-off::after {
+  content: '58';
+}
+
+.container .card:nth-child(58) .card-on {
+  background-image: url(../images/cards/super-racing/3/58.webp);
+}
+
+.container .card:nth-child(59) .card-off::after {
+  content: '59';
+}
+
+.container .card:nth-child(59) .card-on {
+  background-image: url(../images/cards/super-racing/3/59.webp);
+}
+
+.container .card:nth-child(60) .card-off::after {
+  content: '60';
+}
+
+.container .card:nth-child(60) .card-on {
+  background-image: url(../images/cards/super-racing/3/60.webp);
+}
+
+.container .card:nth-child(61) .card-off::after {
+  content: '61';
+}
+
+.container .card:nth-child(61) .card-on {
+  background-image: url(../images/cards/super-racing/3/61.webp);
+}
+
+.container .card:nth-child(62) .card-off::after {
+  content: '62';
+}
+
+.container .card:nth-child(62) .card-on {
+  background-image: url(../images/cards/super-racing/3/62.webp);
+}
+
+.container .card:nth-child(63) .card-off::after {
+  content: '63';
+}
+
+.container .card:nth-child(63) .card-on {
+  background-image: url(../images/cards/super-racing/3/63.webp);
+}
+
+.container .card:nth-child(64) .card-off::after {
+  content: '64';
+}
+
+.container .card:nth-child(64) .card-on {
+  background-image: url(../images/cards/super-racing/3/64.webp);
+}
+
+.container .card:nth-child(65) .card-off::after {
+  content: '65';
+}
+
+.container .card:nth-child(65) .card-on {
+  background-image: url(../images/cards/super-racing/3/65.webp);
+}
+
+.container .card:nth-child(66) .card-off::after {
+  content: '66';
+}
+
+.container .card:nth-child(66) .card-on {
+  background-image: url(../images/cards/super-racing/3/66.webp);
+}
+
+.container .card:nth-child(67) .card-off::after {
+  content: '67';
+}
+
+.container .card:nth-child(67) .card-on {
+  background-image: url(../images/cards/super-racing/3/67.webp);
+}
+
+.container .card:nth-child(68) .card-off::after {
+  content: '68';
+}
+
+.container .card:nth-child(68) .card-on {
+  background-image: url(../images/cards/super-racing/3/68.webp);
+}
+
+.container .card:nth-child(69) .card-off::after {
+  content: '69';
+}
+
+.container .card:nth-child(69) .card-on {
+  background-image: url(../images/cards/super-racing/3/69.webp);
+}
+
+.container .card:nth-child(70) .card-off::after {
+  content: '70';
+}
+
+.container .card:nth-child(70) .card-on {
+  background-image: url(../images/cards/super-racing/3/70.webp);
+}
+
+.container .card:nth-child(71) .card-off::after {
+  content: '71';
+}
+
+.container .card:nth-child(71) .card-on {
+  background-image: url(../images/cards/super-racing/3/71.webp);
+}
+
+.container .card:nth-child(72) .card-off::after {
+  content: '72';
+}
+
+.container .card:nth-child(72) .card-on {
+  background-image: url(../images/cards/super-racing/3/72.webp);
+}
+
+.container .card:nth-child(73) .card-off::after {
+  content: '73';
+}
+
+.container .card:nth-child(73) .card-on {
+  background-image: url(../images/cards/super-racing/3/73.webp);
+}
+
+.container .card:nth-child(74) .card-off::after {
+  content: '74';
+}
+
+.container .card:nth-child(74) .card-on {
+  background-image: url(../images/cards/super-racing/3/74.webp);
+}
+
+.container .card:nth-child(75) .card-off::after {
+  content: '75';
+}
+
+.container .card:nth-child(75) .card-on {
+  background-image: url(../images/cards/super-racing/3/75.webp);
+}
+
+.container .card:nth-child(76) .card-off::after {
+  content: '76';
+}
+
+.container .card:nth-child(76) .card-on {
+  background-image: url(../images/cards/super-racing/3/76.webp);
+}
+
+.container .card:nth-child(77) .card-off::after {
+  content: '77';
+}
+
+.container .card:nth-child(77) .card-on {
+  background-image: url(../images/cards/super-racing/3/77.webp);
+}
+
+.container .card:nth-child(78) .card-off::after {
+  content: '78';
+}
+
+.container .card:nth-child(78) .card-on {
+  background-image: url(../images/cards/super-racing/3/78.webp);
+}
+
+.container .card:nth-child(79) .card-off::after {
+  content: '79';
+}
+
+.container .card:nth-child(79) .card-on {
+  background-image: url(../images/cards/super-racing/3/79.webp);
+}
+
+.container .card:nth-child(80) .card-off::after {
+  content: '80';
+}
+
+.container .card:nth-child(80) .card-on {
+  background-image: url(../images/cards/super-racing/3/80.webp);
+}
+
+.container .card:nth-child(81) .card-off::after {
+  content: '81';
+}
+
+.container .card:nth-child(81) .card-on {
+  background-image: url(../images/cards/super-racing/3/81.webp);
+}
+
+.container .card:nth-child(82) .card-off::after {
+  content: '82';
+}
+
+.container .card:nth-child(82) .card-on {
+  background-image: url(../images/cards/super-racing/3/82.webp);
+}
+
+.container .card:nth-child(83) .card-off::after {
+  content: '83';
+}
+
+.container .card:nth-child(83) .card-on {
+  background-image: url(../images/cards/super-racing/3/83.webp);
+}
+
+.container .card:nth-child(84) .card-off::after {
+  content: '84';
+}
+
+.container .card:nth-child(84) .card-on {
+  background-image: url(../images/cards/super-racing/3/84.webp);
+}
+
+.container .card:nth-child(85) .card-off::after {
+  content: '85';
+}
+
+.container .card:nth-child(85) .card-on {
+  background-image: url(../images/cards/super-racing/3/85.webp);
+}
+
+.container .card:nth-child(86) .card-off::after {
+  content: '86';
+}
+
+.container .card:nth-child(86) .card-on {
+  background-image: url(../images/cards/super-racing/3/86.webp);
+}
+
+.container .card:nth-child(87) .card-off::after {
+  content: '87';
+}
+
+.container .card:nth-child(87) .card-on {
+  background-image: url(../images/cards/super-racing/3/87.webp);
+}
+
+.container .card:nth-child(88) .card-off::after {
+  content: '88';
+}
+
+.container .card:nth-child(88) .card-on {
+  background-image: url(../images/cards/super-racing/3/88.webp);
+}
+
+.container .card:nth-child(89) .card-off::after {
+  content: '89';
+}
+
+.container .card:nth-child(89) .card-on {
+  background-image: url(../images/cards/super-racing/3/89.webp);
+}
+
+.container .card:nth-child(90) .card-off::after {
+  content: '90';
+}
+
+.container .card:nth-child(90) .card-on {
+  background-image: url(../images/cards/super-racing/3/90.webp);
+}
+
+.container .card:nth-child(91) .card-off::after {
+  content: '91';
+}
+
+.container .card:nth-child(91) .card-on {
+  background-image: url(../images/cards/super-racing/3/91.webp);
+}
+
+.container .card:nth-child(92) .card-off::after {
+  content: '92';
+}
+
+.container .card:nth-child(92) .card-on {
+  background-image: url(../images/cards/super-racing/3/92.webp);
+}
+
+.container .card:nth-child(93) .card-off::after {
+  content: '93';
+}
+
+.container .card:nth-child(93) .card-on {
+  background-image: url(../images/cards/super-racing/3/93.webp);
+}
+
+.container .card:nth-child(94) .card-off::after {
+  content: '94';
+}
+
+.container .card:nth-child(94) .card-on {
+  background-image: url(../images/cards/super-racing/3/94.webp);
+}
+
+.container .card:nth-child(95) .card-off::after {
+  content: '95';
+}
+
+.container .card:nth-child(95) .card-on {
+  background-image: url(../images/cards/super-racing/3/95.webp);
+}
+
+.container .card:nth-child(96) .card-off::after {
+  content: '96';
+}
+
+.container .card:nth-child(96) .card-on {
+  background-image: url(../images/cards/super-racing/3/96.webp);
+}
+
+.container .card:nth-child(97) .card-off::after {
+  content: '97';
+}
+
+.container .card:nth-child(97) .card-on {
+  background-image: url(../images/cards/super-racing/3/97.webp);
+}
+
+.container .card:nth-child(98) .card-off::after {
+  content: '98';
+}
+
+.container .card:nth-child(98) .card-on {
+  background-image: url(../images/cards/super-racing/3/98.webp);
+}
+
+.container .card:nth-child(99) .card-off::after {
+  content: '99';
+}
+
+.container .card:nth-child(99) .card-on {
+  background-image: url(../images/cards/super-racing/3/99.webp);
+}
+
+.container .card:nth-child(100) .card-off::after {
+  content: '100';
+}
+
+.container .card:nth-child(100) .card-on {
+  background-image: url(../images/cards/super-racing/3/100.webp);
+}
+
+.container .card:nth-child(101) .card-off::after {
+  content: '101';
+}
+
+.container .card:nth-child(101) .card-on {
+  background-image: url(../images/cards/super-racing/3/101.webp);
+}
+
+.container .card:nth-child(102) .card-off::after {
+  content: '102';
+}
+
+.container .card:nth-child(102) .card-on {
+  background-image: url(../images/cards/super-racing/3/102.webp);
+}
+
+.container .card:nth-child(103) .card-off::after {
+  content: '103';
+}
+
+.container .card:nth-child(103) .card-on {
+  background-image: url(../images/cards/super-racing/3/103.webp);
+}
+
+.container .card:nth-child(104) .card-off::after {
+  content: '104';
+}
+
+.container .card:nth-child(104) .card-on {
+  background-image: url(../images/cards/super-racing/3/104.webp);
+}
+
+.container .card:nth-child(105) .card-off::after {
+  content: '105';
+}
+
+.container .card:nth-child(105) .card-on {
+  background-image: url(../images/cards/super-racing/3/105.webp);
+}
+
+.container .card:nth-child(106) .card-off::after {
+  content: '106';
+}
+
+.container .card:nth-child(106) .card-on {
+  background-image: url(../images/cards/super-racing/3/106.webp);
+}
+
+.container .card:nth-child(107) .card-off::after {
+  content: '107';
+}
+
+.container .card:nth-child(107) .card-on {
+  background-image: url(../images/cards/super-racing/3/107.webp);
+}
+
+.container .card:nth-child(108) .card-off::after {
+  content: '108';
+}
+
+.container .card:nth-child(108) .card-on {
+  background-image: url(../images/cards/super-racing/3/108.webp);
+}
+
+.container .card:nth-child(109) .card-off::after {
+  content: '109';
+}
+
+.container .card:nth-child(109) .card-on {
+  background-image: url(../images/cards/super-racing/3/109.webp);
+}
+
+.container .card:nth-child(110) .card-off::after {
+  content: '110';
+}
+
+.container .card:nth-child(110) .card-on {
+  background-image: url(../images/cards/super-racing/3/110.webp);
+}
+
+.container .card:nth-child(111) .card-off::after {
+  content: '111';
+}
+
+.container .card:nth-child(111) .card-on {
+  background-image: url(../images/cards/super-racing/3/111.webp);
+}
+
+.container .card:nth-child(112) .card-off::after {
+  content: '112';
+}
+
+.container .card:nth-child(112) .card-on {
+  background-image: url(../images/cards/super-racing/3/112.webp);
+}
+
+.container .card:nth-child(113) .card-off::after {
+  content: '113';
+}
+
+.container .card:nth-child(113) .card-on {
+  background-image: url(../images/cards/super-racing/3/113.webp);
+}
+
+.container .card:nth-child(114) .card-off::after {
+  content: '114';
+}
+
+.container .card:nth-child(114) .card-on {
+  background-image: url(../images/cards/super-racing/3/114.webp);
+}
+
+.container .card:nth-child(115) .card-off::after {
+  content: '115';
+}
+
+.container .card:nth-child(115) .card-on {
+  background-image: url(../images/cards/super-racing/3/115.webp);
+}
+
+.container .card:nth-child(116) .card-off::after {
+  content: '116';
+}
+
+.container .card:nth-child(116) .card-on {
+  background-image: url(../images/cards/super-racing/3/116.webp);
+}
+
+.container .card:nth-child(117) .card-off::after {
+  content: '117';
+}
+
+.container .card:nth-child(117) .card-on {
+  background-image: url(../images/cards/super-racing/3/117.webp);
+}
+
+.container .card:nth-child(118) .card-off::after {
+  content: '118';
+}
+
+.container .card:nth-child(118) .card-on {
+  background-image: url(../images/cards/super-racing/3/118.webp);
+}
+
+.container .card:nth-child(119) .card-off::after {
+  content: '119';
+}
+
+.container .card:nth-child(119) .card-on {
+  background-image: url(../images/cards/super-racing/3/119.webp);
+}
+
+.container .card:nth-child(120) .card-off::after {
+  content: '120';
+}
+
+.container .card:nth-child(120) .card-on {
+  background-image: url(../images/cards/super-racing/3/120.webp);
+}
+
+.container .card:nth-child(121) .card-off::after {
+  content: '121';
+}
+
+.container .card:nth-child(121) .card-on {
+  background-image: url(../images/cards/super-racing/3/121.webp);
+}
+
+.container .card:nth-child(122) .card-off::after {
+  content: '122';
+}
+
+.container .card:nth-child(122) .card-on {
+  background-image: url(../images/cards/super-racing/3/122.webp);
+}
+
+.container .card:nth-child(123) .card-off::after {
+  content: '123';
+}
+
+.container .card:nth-child(123) .card-on {
+  background-image: url(../images/cards/super-racing/3/123.webp);
+}
+
+.container .card:nth-child(124) .card-off::after {
+  content: '124';
+}
+
+.container .card:nth-child(124) .card-on {
+  background-image: url(../images/cards/super-racing/3/124.webp);
+}
+
+.container .card:nth-child(125) .card-off::after {
+  content: '125';
+}
+
+.container .card:nth-child(125) .card-on {
+  background-image: url(../images/cards/super-racing/3/125.webp);
+}
+
+.container .card:nth-child(126) .card-off::after {
+  content: '126';
+}
+
+.container .card:nth-child(126) .card-on {
+  background-image: url(../images/cards/super-racing/3/126.webp);
+}
+
+.container .card:nth-child(127) .card-off::after {
+  content: '127';
+}
+
+.container .card:nth-child(127) .card-on {
+  background-image: url(../images/cards/super-racing/3/127.webp);
+}
+
+.container .card:nth-child(128) .card-off::after {
+  content: '128';
+}
+
+.container .card:nth-child(128) .card-on {
+  background-image: url(../images/cards/super-racing/3/128.webp);
+}
+
+.container .card:nth-child(129) .card-off::after {
+  content: '129';
+}
+
+.container .card:nth-child(129) .card-on {
+  background-image: url(../images/cards/super-racing/3/129.webp);
+}
+
+.container .card:nth-child(130) .card-off::after {
+  content: '130';
+}
+
+.container .card:nth-child(130) .card-on {
+  background-image: url(../images/cards/super-racing/3/130.webp);
+}
+
+.container .card:nth-child(131) .card-off::after {
+  content: '131';
+}
+
+.container .card:nth-child(131) .card-on {
+  background-image: url(../images/cards/super-racing/3/131.webp);
+}
+
+.container .card:nth-child(132) .card-off::after {
+  content: '132';
+}
+
+.container .card:nth-child(132) .card-on {
+  background-image: url(../images/cards/super-racing/3/132.webp);
+}
+
+.container .card:nth-child(133) .card-off::after {
+  content: '133';
+}
+
+.container .card:nth-child(133) .card-on {
+  background-image: url(../images/cards/super-racing/3/133.webp);
+}
+
+.container .card:nth-child(134) .card-off::after {
+  content: '134';
+}
+
+.container .card:nth-child(134) .card-on {
+  background-image: url(../images/cards/super-racing/3/134.webp);
+}
+
+.container .card:nth-child(135) .card-off::after {
+  content: '135';
+}
+
+.container .card:nth-child(135) .card-on {
+  background-image: url(../images/cards/super-racing/3/135.webp);
+}
+
+.container .card:nth-child(136) .card-off::after {
+  content: '136';
+}
+
+.container .card:nth-child(136) .card-on {
+  background-image: url(../images/cards/super-racing/3/136.webp);
+}
+
+.container .card:nth-child(137) .card-off::after {
+  content: '137';
+}
+
+.container .card:nth-child(137) .card-on {
+  background-image: url(../images/cards/super-racing/3/137.webp);
+}
+
+.container .card:nth-child(138) .card-off::after {
+  content: '138';
+}
+
+.container .card:nth-child(138) .card-on {
+  background-image: url(../images/cards/super-racing/3/138.webp);
+}
+
+.container .card:nth-child(139) .card-off::after {
+  content: '139';
+}
+
+.container .card:nth-child(139) .card-on {
+  background-image: url(../images/cards/super-racing/3/139.webp);
+}
+
+.container .card:nth-child(140) .card-off::after {
+  content: '140';
+}
+
+.container .card:nth-child(140) .card-on {
+  background-image: url(../images/cards/super-racing/3/140.webp);
+}
+
+.container .card:nth-child(141) .card-off::after {
+  content: '141';
+}
+
+.container .card:nth-child(141) .card-on {
+  background-image: url(../images/cards/super-racing/3/141.webp);
+}
+
+.container .card:nth-child(142) .card-off::after {
+  content: '142';
+}
+
+.container .card:nth-child(142) .card-on {
+  background-image: url(../images/cards/super-racing/3/142.webp);
+}
+
+.container .card:nth-child(143) .card-off::after {
+  content: '143';
+}
+
+.container .card:nth-child(143) .card-on {
+  background-image: url(../images/cards/super-racing/3/143.webp);
+}
+
+.container .card:nth-child(144) .card-off::after {
+  content: '144';
+}
+
+.container .card:nth-child(144) .card-on {
+  background-image: url(../images/cards/super-racing/3/144.webp);
+}
+
+.container .card:nth-child(145) .card-off::after {
+  content: '145';
+}
+
+.container .card:nth-child(145) .card-on {
+  background-image: url(../images/cards/super-racing/3/145.webp);
+}
+
+.card {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  margin: 30px;
+  margin-bottom: 60px;
+  border-radius: 15px;
+}
+
+.card .card-off::after {
+  content: '1';
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+  font-family: 'space';
+  width: 90px;
+  height: 30px;
+  border: 4px solid #fff;
+  background-color: #fff;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: -40px;
+  right: -65px;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+}
+
+.card .card-on::after {
+  content: '';
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+  font-family: 'space';
+  width: 90px;
+  height: 30px;
+  border: 4px solid #fff;
+  background-color: #fff;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: -40px;
+  right: -65px;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+}
+
+.card-off {
+  background-image: url(../images/cards/super-racing/3/0.webp);
+  height: 315px;
+  width: 230px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
+  border: 3px solid #fff;
+  border-radius: 15px;
+}
+
+.card-on {
+  background-image: url(../images/cards/super-racing/3/1.webp);
+  height: 315px;
+  width: 230px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
+  border: 3px solid #fff;
+  border-radius: 15px;
+}
